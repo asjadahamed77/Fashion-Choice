@@ -11,7 +11,7 @@ const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
 
   return (
-    <div>
+    <div className="shadow-sm border-gray-600">
       {/* Top navbar social icons */}
       <div className="flex justify-end items-center space-x-4 p-2 shadow-sm ">
         <img className="w-6 h-6 cursor-pointer hover:border hover:border-gray-800 hover:p-1 transition-all duration-300 hover:rounded-full" src={fb_icon} alt="Facebook icon" />
@@ -20,7 +20,7 @@ const Navbar = () => {
       </div>
 
       {/* Navbar Elements */}
-      <div className="flex items-center justify-around p-4 shadow-sm border-gray-600">
+      <div className="flex items-center justify-around p-4 ">
         {/* search */}
         <Link to={'/search'}>
           <img className="w-6 h-6 cursor-pointer" src={search} alt="Search icon" />
@@ -92,9 +92,10 @@ const Navbar = () => {
       </div>
 
       {/* Mobile NavLinks */}
+      <div className="lg:hidden">
       <ul
-        className={`font-semibold z-[100] bg-white ${showMenu ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'} flex flex-col items-center transition-all duration-500 w-full shadow-md p-4 gap-4 overflow-hidden`}>
-        <li>
+        className={`font-semibold z-[100] bg-white ${showMenu ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'} flex flex-col items-center transition-all duration-500 w-full shadow-md  overflow-hidden`}>
+        <li className="w-full border-t text-center py-2">
           <NavLink
             to="/"
             onClick={() => setShowMenu(false)}
@@ -105,7 +106,7 @@ const Navbar = () => {
             HOME
           </NavLink>
         </li>
-        <li>
+        <li className="w-full border-t text-center py-2">
           <NavLink
             to="/collections"
             onClick={() => setShowMenu(false)}
@@ -116,7 +117,7 @@ const Navbar = () => {
             COLLECTIONS
           </NavLink>
         </li>
-        <li>
+        <li className="w-full border-t text-center py-2">
           <NavLink
             to="/gallery"
             onClick={() => setShowMenu(false)}
@@ -127,7 +128,7 @@ const Navbar = () => {
             GALLERY
           </NavLink>
         </li>
-        <li>
+        <li className="w-full border-t text-center py-2">
           <NavLink
             to="/about-us"
             onClick={() => setShowMenu(false)}
@@ -138,7 +139,7 @@ const Navbar = () => {
             ABOUT US
           </NavLink>
         </li>
-        <li>
+        <li className="w-full border-t text-center py-2">
           <NavLink
             to="/contact-us"
             onClick={() => setShowMenu(false)}
@@ -150,6 +151,7 @@ const Navbar = () => {
           </NavLink>
         </li>
       </ul>
+      </div>
     </div>
   );
 };
