@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import img1 from '../assets/Hero Images/hero1.jpg';
-import img2 from '../assets/Hero Images/hero2.jpg';
-import img3 from '../assets/Hero Images/hero3.jpg';
-import img4 from '../assets/Hero Images/hero4.jpg';
+import img1 from '../assets/Hero Images/hero1.jpeg';
+import img2 from '../assets/Hero Images/hero2.jpeg';
+import img3 from '../assets/Hero Images/hero3.jpeg';
+import img4 from '../assets/Hero Images/hero4.jpeg';
 
 const Hero = () => {
 
