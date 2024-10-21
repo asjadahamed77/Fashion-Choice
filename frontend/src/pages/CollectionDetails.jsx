@@ -28,7 +28,7 @@ fetchProductData()
       <div className=''>
       <div className='flex sm:items-start items-center flex-col sm:flex-row gap-8 '>
       {/* Left Image */}
-      <div className='w-[350px] mx-auto '>
+      <div className='w-[350px] mx-auto sm:mx-0 '>
       <img className='object-cover' src={productData.productImage} alt="" />
       </div>
       {/* Right Details */}
@@ -53,9 +53,9 @@ fetchProductData()
       {/* Right Side */}
      
       {/* Collections */}
-     <div>
+     <div className='sm:px-10 px-2 sm:min-w-[500px]'>
     <h1 className='text-center xl:mt-0 mt-12 mb-8 font-cursiveFont text-3xl font-semibold'>More Collections</h1>
-     <div className='flex-1 grid xl:grid-cols-2 lg:grid-cols-3 grid-cols-2 gap-4 sm:px-10 px-2 '>
+     <div className='grid xl:grid-cols-2 lg:grid-cols-3 sm:grid-cols-3 grid-cols-2 gap-4  '>
       
       {
         collections.slice(0,10).map((item,index)=>(
