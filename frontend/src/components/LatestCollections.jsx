@@ -7,7 +7,7 @@ const LatestCollections = () => {
   return (
     <div className="py-12">
       {/* Title */}
-      <div className="text-center">
+      <div id="our-collections" className="text-center">
         <h1 className="font-cursiveFont sm:text-5xl text-4xl ">
           Latest Collections
         </h1>
@@ -16,12 +16,12 @@ const LatestCollections = () => {
         </p>
       </div>
       {/* Display Products */}
-      <div className="grid xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 sm:mx-auto mx-4 sm:w-[90%] gap-4 mt-8">
+      <div  className="grid xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 sm:mx-auto mx-4 sm:w-[90%] gap-4 mt-8">
         {collections.slice(0, 10).map((item, index) => (
           <div
             key={index}
             onClick={() => {
-              navigate(`/collections/${item._id}`);
+              navigate(`/product/${item._id}`);
               window.scrollTo(0, 0);
             }}
             className="border border-gray-600 cursor-pointer group relative"

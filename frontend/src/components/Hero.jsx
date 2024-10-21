@@ -37,9 +37,9 @@ const Hero = () => {
           <p className="font-headingFont w-[80%] md:text-lg mt-2 sm:text-base text-sm">
             Discover the finest collections crafted for elegance, comfort, and sophistication. Your fashion, your choice.
           </p>
-          <button className="bg-transparent sm:px-6 px-4 sm:py-2 py-1.5 text-sm sm:text-base mt-6 border-2 hover:text-black rounded font-headingFont hover:bg-white transition-all duration-300">
+          <a href='#our-collections' className="bg-transparent sm:px-6 px-4 sm:py-2 py-1.5 text-sm sm:text-base mt-6 border-2 hover:text-black rounded font-headingFont hover:bg-white transition-all duration-300">
             Explore Our Collections
-          </button>
+          </a>
         </div>
       </div>
     </div>

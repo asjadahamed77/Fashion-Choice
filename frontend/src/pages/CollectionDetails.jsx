@@ -62,7 +62,7 @@ fetchProductData()
           <div
           key={index}
           onClick={() => {
-            navigate(`/collections/${item._id}`);
+            navigate(`/product/${item._id}`);
             window.scrollTo(0, 0);
           }}
           className="border border-gray-600 cursor-pointer group relative"
