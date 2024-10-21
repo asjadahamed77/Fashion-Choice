@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { collections } from '../assets/assets'
+import RelatedProducts from '../components/RelatedProducts'
 
 const CollectionDetails = () => {
   const navigate = useNavigate()
@@ -45,8 +46,8 @@ fetchProductData()
       </div>
       </div>
       {/* Related Products */}
-      <div>
-
+      <div className='mt-8'>
+    <RelatedProducts productCategory={productData.productCategory} />
       </div>
       </div>
       {/* Right Side */}
