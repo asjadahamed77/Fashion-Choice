@@ -34,8 +34,8 @@ const RelatedProducts = ({productCategory}) => {
               <p className="font-headingFont sm:text-base text-sm font-medium w-full overflow-hidden text-ellipsis whitespace-nowrap">
                 {item.productName}
               </p>
-              <div className="flex gap-4">
-                <p className="line-through text-gray-400">
+              <div className="flex gap-4 mb-12">
+                <p className="line-through text-gray-400 text-sm sm:text-base">
                   Rs.{item.productPrice}
                 </p>
                 <p className="text-red-600 font-semibold">
