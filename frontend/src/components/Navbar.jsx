@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 import logo from "../assets/Logo and Icons/Fashion Choice Logo.png";
 import fb_icon from "../assets/Logo and Icons/facebook.png";
@@ -6,10 +6,11 @@ import insta_icon from "../assets/Logo and Icons/instagram.png";
 import whatsapp_icon from "../assets/Logo and Icons/whatsapp.png";
 import search from '../assets/Logo and Icons/search.png';
 import menu from '../assets/Logo and Icons/menu.png';
+import { AppContext } from "../context/AppContext";
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
-
+  const {showSearch,setShowSearch} = useContext(AppContext)
   return (
     <div className="shadow-sm border-gray-600">
       {/* Top navbar social icons */}
@@ -22,8 +23,8 @@ const Navbar = () => {
       {/* Navbar Elements */}
       <div className="flex items-center justify-around p-4 ">
         {/* search */}
-        <Link to={'/search'}>
-          <img className="w-6 h-6 cursor-pointer" src={search} alt="Search icon" />
+        <Link to={'/collections'}>
+          <img onClick={()=>setShowSearch(prev => !prev)} className="w-6 h-6 cursor-pointer" src={search} alt="Search icon" />
         </Link>
 
         {/* Navbar Logo */}

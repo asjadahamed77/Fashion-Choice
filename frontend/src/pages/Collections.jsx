@@ -1,16 +1,25 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { collections } from "../assets/assets";
+import Search from "../components/Search";
+import { AppContext } from "../context/AppContext";
 
 const Collections = () => {
   const navigate = useNavigate();
   const { productCategory } = useParams();
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [productType, setProductType] = useState("All");
+  const {showSearch,search} = useContext(AppContext)
 
   // Apply both category and product type filters
   const applyFilters = () => {
     let filtered = collections;
+
+    if(search){
+      filtered = filtered.filter(
+        (product) => product.productName.toLowerCase().includes(search.toLowerCase())
+      )
+    }
 
     if (productCategory) {
       filtered = filtered.filter(
@@ -28,10 +37,15 @@ const Collections = () => {
   // Reapply filters when category or type changes
   useEffect(() => {
     applyFilters();
-  }, [productCategory, productType]);
+  }, [productCategory, productType,search]);
 
   return (
     <div className="sm:w-[90%] sm:mx-auto mx-4 py-8">
+      <div>
+        {
+          showSearch && <Search />
+        }
+      </div>
       {/* Filter Section */}
       <div className="flex justify-between">
         {/* Filter by Category */}
