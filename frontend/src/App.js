@@ -6,6 +6,7 @@ import CollectionDetails from './pages/CollectionDetails';
 import Gallery from './pages/Gallery';
 import ContactUs from './pages/ContactUs';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path='/gallery' element={<Gallery />} />
         <Route path='/contact-us' element={<ContactUs />} />
       </Routes>
+      <Footer />
       </BrowserRouter>
     </div>
   );
