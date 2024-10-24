@@ -28,7 +28,7 @@ const Directors = () => {
     return (
         <div className='py-8 sm:mx-auto mx-4 sm:w-[90%]'>
             {/* Title */}
-            <div id="our-collections" className="text-center">
+            <div  className="text-center">
                 <h1 className="font-cursiveFont sm:text-5xl text-4xl">
                     Meet the Visionaries Behind Fashion Choice
                 </h1>

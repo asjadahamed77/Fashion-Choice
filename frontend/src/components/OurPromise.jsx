@@ -7,7 +7,7 @@ const OurPromise = () => {
   return (
     <div className='py-12'>
       {/* Title */}
-      <div id="our-collections" className="text-center">
+      <div className="text-center">
         <h1 className="font-cursiveFont sm:text-5xl text-4xl ">
           Crafted for Timeless Beauty
         </h1>
