@@ -2,12 +2,13 @@ import React, { useState, useEffect } from "react";
 import img1 from "../assets/about hero/about1.jpg";
 import img2 from "../assets/about hero/about2.jpg";
 import img3 from "../assets/about hero/about3.jpg";
+import { useNavigate } from "react-router-dom";
 
 const images = [img1, img2, img3];
 
 const AboutHero = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
+  const navigate = useNavigate()
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) =>
@@ -29,7 +30,7 @@ const AboutHero = () => {
           <p className="font-headingFont font-light mt-4 text-center lg:w-[60%] md:w-[70%] sm:text-base text-xs leading-[22px] w-[80%]">
             At Fashion Choice, we believe in the art of fashion—where every piece tells a story. Our curated collections celebrate the beauty of tradition while embracing modern aesthetics, ensuring that you find the perfect outfit for every occasion.
           </p>
-          <button className="bg-transparent sm:px-6 px-4 sm:py-2 py-1.5 text-sm sm:text-base mt-6 border-2 hover:text-black rounded font-headingFont hover:bg-white transition-all duration-300">
+          <button onClick={()=>{navigate('/collections');window.scrollTo(0,0)}} className="bg-transparent sm:px-6 px-4 sm:py-2 py-1.5 text-sm sm:text-base mt-6 border-2 hover:text-black rounded font-headingFont hover:bg-white transition-all duration-300">
             Explore Our Collections
           </button>
         </div>
