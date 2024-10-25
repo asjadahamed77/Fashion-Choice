@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import img1 from "../assets/contact/contact1.jpg";
 import img2 from "../assets/contact/contact2.jpg";
@@ -6,6 +6,10 @@ import img3 from "../assets/contact/contact3.jpg";
 import { toast } from 'react-toastify';
 const Contact = () => {
   const form = useRef();
+  const [userName,setUserName] = useState('')
+  const [userEmail,setUserEmail] = useState('')
+  const [userSubject,setUserSubject] = useState('')
+  const [userMessage,setUserMessage] = useState('')
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -17,6 +21,11 @@ const Contact = () => {
       .then(
         () => {
           toast.success("Mail Sent Successfully")
+          setUserName("")
+          setUserEmail("")
+          setUserMessage("")
+          setUserSubject("")
+
         },
         (error) => {
           toast.error("Error sending mail")
@@ -41,10 +50,10 @@ const Contact = () => {
             back to you soon
           </p>
           <div className="mt-6 font-medium flex flex-col gap-2">
-          <input type="text" placeholder="Enter your name"  name='user_name' className="p-2 pl-4 w-full bg-transparent font-medium text-sm border border-gray-500 rounded outline-black" />
-          <input type="email" placeholder="Enter your email" name='user_email' className="p-2 pl-4 w-full bg-transparent font-medium text-sm border border-gray-500 rounded outline-black" />
-          <input type="text" placeholder="Subject" name='subject' className="p-2 pl-4 w-full bg-transparent font-medium text-sm border border-gray-500 rounded outline-black" />
-          <textarea placeholder="Type your message" name='message' className="p-2 pl-4 text-sm w-full resize-none h-[120px] overflow-y-scroll border border-gray-500 rounded bg-transparent outline-black"></textarea>
+          <input type="text" placeholder="Enter your name"  name='user_name' onChange={(e)=>setUserName(e.target.value)} value={userName} className="p-2 pl-4 w-full bg-transparent font-medium text-sm border border-gray-500 rounded outline-black" />
+          <input type="email" placeholder="Enter your email" name='user_email' onChange={(e)=>setUserEmail(e.target.value)}  value={userEmail} className="p-2 pl-4 w-full bg-transparent font-medium text-sm border border-gray-500 rounded outline-black" />
+          <input type="text" placeholder="Subject" name='subject' value={userSubject} onChange={(e)=>setUserSubject(e.target.value)}  className="p-2 pl-4 w-full bg-transparent font-medium text-sm border border-gray-500 rounded outline-black" />
+          <textarea placeholder="Type your message" name='message' value={userMessage} onChange={(e)=>setUserMessage(e.target.value)}  className="p-2 pl-4 text-sm w-full resize-none h-[120px] overflow-y-scroll border border-gray-500 rounded bg-transparent outline-black"></textarea>
           <button type='submit' value="Send" className="w-full mt-2 py-3 text-sm bg-white text-black rounded hover:opacity-60 duration-300 transition-all">Submit Now</button>
           </div>
         </div>
