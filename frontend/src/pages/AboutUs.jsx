@@ -1,6 +1,6 @@
 import React from "react";
 import Directors from "../components/Directors";
-import Contact from "../components/Contact";
+
 import img1 from '../assets/aboutUs/about1.jpeg'
 import img2 from '../assets/aboutUs/about2.jpeg'
 import img3 from '../assets/aboutUs/about3.jpeg'

@@ -1,8 +1,8 @@
 import React, { useRef, useState, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
-import img1 from '../assets/contact/contact1.jpg';
-import img2 from '../assets/contact/contact2.jpg';
-import img3 from '../assets/contact/contact3.jpg';
+import img1 from '../assets/contact/contact1 Large.jpeg';
+import img2 from '../assets/contact/contact2 Large.jpeg';
+import img3 from '../assets/contact/contact3 Large.jpeg';
 import { toast } from 'react-toastify';
 
 const images = [img1, img2, img3]; // Array of images

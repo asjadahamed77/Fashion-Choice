@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import img1 from "../assets/about hero/about1.jpg";
-import img2 from "../assets/about hero/about2.jpg";
-import img3 from "../assets/about hero/about3.jpg";
+import img1 from "../assets/about hero/about1 Large.jpeg";
+import img2 from "../assets/about hero/about2 Large.jpeg";
+import img3 from "../assets/about hero/about3 Large.jpeg";
 import { useNavigate } from "react-router-dom";
 
 const images = [img1, img2, img3];
