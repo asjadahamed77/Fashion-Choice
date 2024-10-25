@@ -57,10 +57,7 @@ const AboutUs = () => {
       <div className="my-6">
         <Directors />
       </div>
-      {/* Contact Us */}
-      <div>
-        <Contact />
-      </div>
+    
     </div>
   );
 };
